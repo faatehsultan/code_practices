@@ -1,3 +1,4 @@
+;INPUT A NUMBER IN HEX AND PRINT IN BINARY (BY FAATEH SULTAN)
 .model small
 .stack 100h
 .data

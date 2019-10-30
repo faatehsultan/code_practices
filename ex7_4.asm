@@ -1,3 +1,4 @@
+;INPIUT BINARY NUMBER AND PRINT IN HEX (BY FAATEH SULTAN)
 .model small
 .stack 100h
 .data

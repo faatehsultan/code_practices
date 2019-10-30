@@ -1,9 +1,11 @@
+;INPUT TWO HEX NUMBERS AND PRINT THEIR SUM IN HEX WITH UNSIGNED OVERFLOW HANDLED (BY FAATEH SULTAN)
 .model small
 .stack 100h
 .data
 msg1 db "Type a HEX number (0~FFFF): $"
 msg2 db "Type a HEX number (0~FFFF): $"
 error_ db "Illegal Number! Try Again: $"
+outputmsg db "Result: $"
 num1 dw ?
 num2 dw ?
 result dw ?
@@ -116,6 +118,10 @@ int 21h
 xor bx, bx
 mov bx, num1
 add bx, num2
+
+mov ah, 09
+mov dx, offset outputmsg
+int 21h
 ;CARRY CHECK
 jnc HEX_PRINT
     PRINT_CARRY:
