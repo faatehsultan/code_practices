@@ -1,0 +1,43 @@
+body {
+	font-family: Tahoma, Geneva, Verdana, sans-serif;	
+}
+
+.navbar {
+	background-color: #7f8c8d;
+	border-bottom: 4px solid #000000;
+}
+
+.navbar-brand {
+	height: 140px;
+	padding-left: 50px;
+}
+
+.navbar-brand a, .navbar-brand a:hover, .navbar-brand a:active {
+	color: #000;
+	text-decoration: none;
+}
+
+h2, h3 {
+	text-align: center;
+}
+
+.tile {
+	background: #7f8c8d;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.navbar-header button {
+	margin-top: 90px;
+}
+
+#bs-example-navbar-collapse-1 {
+	width: 100%;
+	text-align: center;
+}
+
+#item1 a, #item2 a, #item3 a {
+	color: #000;
+	border: 1px solid #000;
+}
+
