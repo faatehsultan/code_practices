@@ -5,16 +5,72 @@ Developed by: Syed Faateh Sultan Kazmi-->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PUCIT Aggregate Calculator</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
   </head>
   <body style="background-color: black; color:white; text-align:center;">
     <div class="container">
-      <h1 style="margin-bottom: 50px;">Under Construction</h1>
+      <h1 style="margin-bottom: 50px;">PUCIT Aggregate Calculator</h1>
+
+      <div class="row">
+        <div class="col-md-4 col-sm-12">
+          <p class="label">Entry Test Marks</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <input type="text" id="entry-test-marks" value="122" placeholder="Marks out of 140">
+        </div>
+        <div class="col-md-4 col-sm-12">
+          Haiz-e-Quran
+          <input type="checkbox" id="hafiz">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-md-4 col-sm-12"">
+          <p class="label">Intermediate Marks</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <input type="text" id="inter-marks-O" value="879" placeholder="Obtained Marks">
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <input type="text" id="inter-marks-T" value="1100" placeholder="Total Marks">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-md-4 col-sm-12">
+          <p class="label">Matric Marks</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <input type="text" id="matric-marks-O" value="824" placeholder="Obtained Marks">
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <input type="text" id="matric-marks-T" value="1100" placeholder="Total Marks">
+        </div>
+      </div>
 
 
-      
-      
+
+      <div class="row">
+        <div class="col-6">
+          <button name="submit" onclick="calculateAggregate()" id="calculate-button">Calculate!</button>
+        </div>
+        <div class="col-6">
+          <p id="answer">0.00</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!--Javascript-->
+    <script type="text/javascript" src="js/script.js"></script>
+
   </body>
 </html>
