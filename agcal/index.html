@@ -1,0 +1,74 @@
+<!--PUCIT Aggregate Calculator
+Developed by: Syed Faateh Sultan Kazmi-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>PUCIT Aggregate Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  </head>
+  <body style="background-color: black; color:white; text-align:center;">
+    <div class="container">
+      <h1 style="margin-bottom: 50px;">PUCIT Aggregate Calculator</h1>
+
+      <div class="row">
+        <div class="col-md-4">
+          <p class="label">Entry Test Marks</p>
+        </div>
+        <div class="col-md-4">
+          <input type="text" id="entry-test-marks" placeholder="Marks out of 140">
+        </div>
+        <div class="col-md-4">
+          Haiz-e-Quran
+          <input type="checkbox" id="hafiz">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-md-4"">
+          <p class="label">Intermediate Marks</p>
+        </div>
+        <div class="col-md-4">
+          <input type="text" id="inter-marks-O" placeholder="Obtained Marks">
+        </div>
+        <div class="col-md-4">
+          <input type="text" id="inter-marks-T" placeholder="Total Marks">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-md-4">
+          <p class="label">Matric Marks</p>
+        </div>
+        <div class="col-md-4">
+          <input type="text" id="matric-marks-O" placeholder="Obtained Marks">
+        </div>
+        <div class="col-md-4">
+          <input type="text" id="matric-marks-T" placeholder="Total Marks">
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-6">
+          <button name="submit" onclick="calculateAggregate()" id="calculate-button">Calculate!</button>
+        </div>
+        <div class="col-6">
+          <p id="answer">0.00</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!--Javascript-->
+    <script type="text/javascript" src="js/script.js"></script>
+
+  </body>
+</html>
