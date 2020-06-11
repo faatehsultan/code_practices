@@ -24,14 +24,17 @@ function calculateAggregate() {
   var hafiz = Boolean(document.getElementById('hafiz').checked);
 
   //validation
-  valid = true;
-  if(entry < 0 || entry > 140 || interO < 0 || interT < 0 || matricO < 0
+  var valid = true;
+  if(entry < 0 || entry > 140 || interO < 0 || interT < 0 || matricO < 0 ||
   matricT < 0) {
+    valid = false;
+  }
+  if(interO > interT || matricO > matricT) {
     valid = false;
   }
 
   //now output result
-  if(valid === true) {
+  if(valid == true) {
     document.getElementById('answer').innerHTML = formula(matricO,
      matricT, interO, interT, entry, hafiz);
   }
