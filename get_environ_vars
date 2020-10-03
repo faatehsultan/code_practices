@@ -9,28 +9,28 @@ int main() {
 	printf("\nTOKENIZING THE ENVIRONMENT VARIABLES\n\n\n");
 	
 	const char delim[2] = "=";
-	char ** varName, ** varValue;
 	int size = 10;
-	varName = (char **)malloc(size * sizeof(char *));
-	varValue = (char **)malloc(size * sizeof(char *));
+	char *** environVar = (char ***)malloc(2 * sizeof(char **)); 
+	//index: 0 for name and 1 for value
+	*(environVar + 0) = (char **)malloc(size * sizeof(char *));
+	*(environVar + 1) = (char **)malloc(size * sizeof(char *));
 
 	for (int i = 0; environ[i] != NULL; i++) {
 		if(i >= size) {
 			size += 10;
-			varName = realloc(varName, size * sizeof(char *));
-			varValue = realloc(varValue, size * sizeof(char *));
+			*(environVar + 0) = realloc(*(environVar + 0), size * sizeof(char *));
+			*(environVar + 1) = realloc(*(environVar + 1), size * sizeof(char *));
 		}
-		*(varValue + i) = environ[i];
-		*(varName + i) = strtok(*(varValue + i), delim);
-		*(varValue + i) = strtok(NULL, delim);
+		*(*(environVar + 1) + i) = environ[i];
+		*(*(environVar + 0) + i) = strtok(*(*(environVar + 1) + i), delim);
+		*(*(environVar + 1) + i) = strtok(NULL, delim);
 		
 		//display
 		printf("environ[%d]\n", i);
-		printf("name: %s\n", *(varName + i));
-		printf("value: %s\n\n", *(varValue + i));
+		printf("name: %s\n", *(*(environVar + 0) + i));
+		printf("value: %s\n\n", *(*(environVar + 1) + i));
 	}
 	return 0;
 }
-
 
 
