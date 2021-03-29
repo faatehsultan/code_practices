@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="content">
+    <span>Nice Environments Sweet Rice</span>
+  </div>
+  <script src="https://cdn.jsdelivr.net/sweep/latest/mainfile"></script>
+  <script src="script.js"></script>
+  <script>
+    var elem = document.getElementsByTagName(body).item(0);
+    elem.addEventListener('click', () => {
+      // sweep(elem, "backgroundColor", "#8e44ad", "#2980b9")
+      sweep(elem, 'backgroundColor', '#a8f', '#a8f', {direction: -1, duration: 2000});
+
+    });
+  </script>
+</body>
+
+</html>
